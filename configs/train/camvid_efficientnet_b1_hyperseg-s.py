@@ -15,7 +15,7 @@ if __name__ == '__main__':
     project_dir = os.path.dirname(os.path.dirname(inspect.getabsfile(main)))
     exp_name = os.path.splitext(os.path.basename(__file__))[0]
     exp_dir = os.path.join('checkpoints/camvid', exp_name)
-    data_dir = 'data/camvid'
+    data_dir = 'ground'
     train_dataset = partial(CamVidDataset, data_dir, ['train', 'val'])  # 960 x 720
     val_dataset = partial(CamVidDataset, data_dir, 'test')
     val_img_transforms = [LargerEdgeResize([576, 768])]
