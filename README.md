@@ -13,13 +13,13 @@ This repository contains the source code for the real-time semantic segmentation
 ## Installation
 Install the following packages:
 ```Bash
-git clone https://github.com/YuvalNirkin/hyperseg
-cd hyperseg
+
 conda env create -f hyperseg_env.yml
 conda activate hyperseg
-pip install -e .    # Alternatively add the root directory of the repository to PYTHONPATH.
+pip install -e . # Alternatively add the root directory of the repository to PYTHONPATH.  
+pip install protobuf==3.20.* 
+pip install ffmpeg-python
 ```
-Next, download the models and datasets:
 
 ## Models
 | Template  | Dataset | Resolution | mIoU (%) | FPS | Link |

@@ -10,7 +10,7 @@ if __name__ == '__main__':
     project_dir = os.path.dirname(os.path.dirname(inspect.getabsfile(main)))
     exp_name = os.path.splitext(os.path.basename(__file__))[0]  # Make sure the config and model have the same base name
     exp_dir = os.path.join('tests', exp_name)
-    model = os.path.join('weights', exp_name + '.pth')
+    model = os.path.join('weights', exp_name + '.pth') #can change to the path of your weights file
     data_dir = 'data/camvid'    # Download from: https://www.kaggle.com/carlolepelaars/camvid#
     test_dataset = partial(CamVidDataset, data_dir, 'test')     # 960 x 720
     img_transforms = [Resize([576, 768])]
